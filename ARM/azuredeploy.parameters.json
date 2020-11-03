@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "aspSku": {
+            "value": "Standard"
+        },
+        "aspSkuCode": {
+            "value": "S1"
+        },
+        "webAppName": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "dbServerName": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "administratorLogin": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "administratorLoginPassword": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "dbSkucapacity": {
+            "value": 2
+        },
+        "dbSkuName": {
+            "value": "GP_Gen5_2"
+        },
+        "dbSkuSizeMB": {
+            "value": 51200
+        },
+        "dbSkuTier": {
+            "value": "GeneralPurpose"
+        },
+        "mysqlVersion": {
+            "value": "5.7"
+        },
+        "databaseskuFamily": {
+            "value": "Gen5"
+        }
+    }
+}
