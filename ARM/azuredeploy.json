@@ -131,8 +131,8 @@
             "kind": "linux",
             "location": "[resourceGroup().location]",
             "sku": {
-                "name": "[parameters('aspSku')]",
-                "tier": "[parameters('aspSkuCode')]"
+                "name": "[parameters('aspSkuCode')]",
+                "tier": "[parameters('aspSku')]"
             },
             "dependsOn":  [
                
