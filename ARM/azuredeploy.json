@@ -164,6 +164,23 @@
                  "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('aspName'))]"
             }
         },
+        {
+             "name": "[concat(parameters('webappName'), '/', 'staging')]",
+            "apiVersion": "2020-06-01",
+            "type": "Microsoft.Web/sites/slots",
+            "kind": "app",
+            "location": "[resourceGroup().location]",
+            "comments": "This specifies the web app slots.",
+            "tags": {
+                "displayName": "WebAppSlots"
+            },
+            "properties": {
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('aspName'))]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/Sites', parameters('webappName'))]"
+            ]
+        },
         {    "name": "[parameters('dbServerName')]",
             "type": "Microsoft.DBforMySQL/servers",
             "apiVersion": "2017-12-01",
